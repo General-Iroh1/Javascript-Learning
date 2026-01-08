@@ -35,10 +35,27 @@ for(let i=1;i<5;i++){
 
 function unlockCity(city,name){
     alert(city+name+" is now unlocked! Enjoy your stay!");
-    document.body.innerHTML="<h1></h1>"
+    document.querySelectorAll('.remove').forEach(element => element.remove());
 }
 
-
-document.body.innerHTML=document.body.innerHTML+"<h1>Hello Sandy!<h1>";
 console.log(document.body.style)
 document.body.style.color="navy";
+// Hiding all elements with class "widget"
+let hidecount = 0;
+document.querySelectorAll(".widget").forEach(el => {
+    el.style.display = "none";
+});
+
+function showWidgets() {
+    if (hidecount%2==0){
+        document.querySelectorAll(".widget").forEach(el => {
+            el.style.display = "block";
+            hidecount++;
+        });
+    } else {
+        document.querySelectorAll(".widget").forEach(el => {
+            el.style.display = "none";
+            hidecount++;
+        });
+    }
+}

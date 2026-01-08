@@ -6,7 +6,28 @@
     <title>Bikini Bottom</title>
 </head>
 <body>
-    <script src="addon.js" defer></script>
+    <h1 class="remove">Hello Sandy Cheeks!</h1>
+    <p class="remove">Welcome to Bikini Bottom! The place where everything comes to life!</p>
+    <script src="learning.js" defer></script>
+    <img src="Oh BROTHER this guy stinks!.png">
     <button onclick="unlockCity('Bikini',' Bottom')">Click to unlock Bikini Bottom</button>
-</body>
+
+
+    
+    <button onclick="showWidgets()">Show</button>
+
+    <h1 class="widget">Heading</h1>
+    <p class="widget">Text</p>
+
+    <script>
+    document.querySelectorAll(".widget").forEach(el => {
+        el.style.display = "none";
+    });
+
+    function showWidgets() {
+    document.querySelectorAll(".widget").forEach(el => {
+        el.style.display = "block";
+    });
+    }
+</script>
 </html>
